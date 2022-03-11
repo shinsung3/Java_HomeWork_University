@@ -67,7 +67,6 @@ public class ArrayExamples {
 				}
 			}
 		}
-		System.out.println(Arrays.toString(array));
 		return array[0];
 	}
 
