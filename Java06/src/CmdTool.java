@@ -10,7 +10,9 @@ interface Command {
 
 public class CmdTool implements Command {
 	public static void main(String[] args) {
-		main2(new String[] { "-l", "sum", "sum","sum","sum","sum","sum", "3", "1", "2" });
+//		main2(new String[] { "-l", "sum", "sum","sum","sum","sum","sum", "3", "1", "2" });
+//		main2(new String[] { "-list", "greater", "0","negative","-1","0","1" });
+		main2(new String[] { "count", "-1", "0", "1" });
 //		CmdTool ct = new CmdTool();
 //		String[] answer = ct.execute(args);
 //		System.out.println(answer[0]);
@@ -368,28 +370,38 @@ class CmdList implements Command {
 		for (int i = 1; i < data.length; i++) {
 			if (data[i].equals("sum")) {
 				command[idx] = new Sum();
+				idx++;
 			} else if (data[i].equals("product")) {
 				command[idx] = new Product();
+				idx++;
 			} else if (data[i].equals("mean")) {
 				command[idx] = new Mean();
+				idx++;
 			} else if (data[i].equals("max")) {
 				command[idx] = new Max();
+				idx++;
 			} else if (data[i].equals("min")) {
 				command[idx] = new Min();
+				idx++;
 			} else if (data[i].equals("positive")) {
 				command[idx] = new Positive();
+				idx++;
 			} else if (data[i].equals("negative")) {
 				command[idx] = new Negative();
+				idx++;
 			} else if (data[i].equals("count")) {
 				command[idx] = new Count();
+				idx++;
 			} else if (data[i].equals("greater")) {
 				command[idx] = new Greater();
+				idx++;
 			} else if (data[i].equals("lesser")) {
 				command[idx] = new Lesser();
+				idx++;
 			} else if (data[i].equals("equal")) {
 				command[idx] = new Equal();
+				idx++;
 			}
-			idx++;
 		}
 		return command;
 	}
